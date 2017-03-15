@@ -16,14 +16,13 @@ typedef void(^textFieldHandler)(UITextField *textField, NSUInteger index);
 /**
  *  按钮--中间
  *
- *  @param title           提示标题
- *  @param message         提示信息
- *  @param textFieldNumber 输入框个数
- *  @param isHaveDes       是否有警告按钮(字体红色)
- *  @param actionNumber    按钮个数
- *  @param actionTitle     按钮标题，数组
- *  @param textFieldHandle 输入框响应事件
- *  @param actionHandle    按钮响应事件
+ *  @param title            提示标题
+ *  @param message          提示信息
+ *  @param textFieldNumber  输入框个数
+ *  @param actionNumber     按钮个数
+ *  @param actionTitle      按钮标题，数组
+ *  @param textFieldHandler 输入框响应事件
+ *  @param actionHandler    按钮响应事件
  */
 + (void)alertWithTitle:(NSString *)title
                message:(NSString *)message
@@ -37,11 +36,11 @@ typedef void(^textFieldHandler)(UITextField *textField, NSUInteger index);
 /**
  *  按钮--底部
  *
- *  @param title           提示标题
- *  @param message         提示信息
- *  @param actionNumber    按钮个数
- *  @param actionTitle     按钮标题，数组
- *  @param actionHandle    按钮响应事件
+ *  @param title            提示标题
+ *  @param message          提示信息
+ *  @param actionNumber     按钮个数
+ *  @param actionTitle      按钮标题，数组
+ *  @param actionHandler    按钮响应事件
  */
 + (void)actionSheettWithTitle:(NSString *)title
                       message:(NSString *)message
