@@ -13,11 +13,11 @@
 @implementation AlertViewManager
 + (void)alertWithTitle:(NSString *)title
                message:(NSString *)message
-       textFieldNumber:(NSInteger)textFieldNumber
-          actionNumber:(NSInteger)actionNumber
+       textFieldNumber:(NSUInteger)textFieldNumber
+          actionNumber:(NSUInteger)actionNumber
           actionTitles:(NSArray *)actionTitle
-       textFieldHandle:(textFieldHandle)textFieldHandle
-          actionHandle:(actionHandle)actionHandle {
+      textFieldHandler:(textFieldHandler)textFieldHandler
+         actionHandler:(actionHandler)actionHandler {
     UIAlertController *alertC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     if (textFieldNumber > 0) {
         for (int i = 0; i < textFieldNumber; i++) {
@@ -27,7 +27,7 @@
         }
     }
     if (actionNumber > 0) {
-        for (int i = 0; i < actionNumber; i++) {
+        for (NSUInteger i = 0; i < actionNumber; i++) {
             UIAlertAction *action = [UIAlertAction actionWithTitle:actionTitle[i] style:UIAlertActionStyleDefault handler:^(UIAlertAction * action)  {
                 actionHandle(action, i);
             }];
@@ -40,12 +40,12 @@
 
 + (void)actionSheettWithTitle:(NSString *)title
                       message:(NSString *)message
-                 actionNumber:(NSInteger)actionNumber
+                 actionNumber:(NSUInteger)actionNumber
                  actionTitles:(NSArray *)actionTitle
-                 actionHandle:(actionHandle)actionHandle {
+                actionHandler:(actionHandle)actionHandler {
     UIAlertController *alertC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleActionSheet];
     if (actionNumber > 0) {
-        for (int i = 0; i < actionNumber; i++) {
+        for (NSUInteger i = 0; i < actionNumber; i++) {
             UIAlertAction *action = [UIAlertAction actionWithTitle:actionTitle[i] style:UIAlertActionStyleDefault handler:^(UIAlertAction * action)  {
                 actionHandle(action, i);
             }];
