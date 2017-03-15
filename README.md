@@ -1,0 +1,2 @@
+UIAlertController的封装，一行代码调用
+
