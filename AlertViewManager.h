@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^actionHandle)(UIAlertAction *action, NSInteger index);
-typedef void(^textFieldHandle)(UITextField *textField, NSInteger index);
+typedef void(^actionHandler)(UIAlertAction *action, NSUInteger index);
+typedef void(^textFieldHandler)(UITextField *textField, NSUInteger index);
 
 @interface AlertViewManager : NSObject
 
@@ -27,11 +27,11 @@ typedef void(^textFieldHandle)(UITextField *textField, NSInteger index);
  */
 + (void)alertWithTitle:(NSString *)title
                message:(NSString *)message
-       textFieldNumber:(NSInteger)textFieldNumber
-          actionNumber:(NSInteger)actionNumber
+       textFieldNumber:(NSUInteger)textFieldNumber
+          actionNumber:(NSUInteger)actionNumber
           actionTitles:(NSArray *)actionTitle
-       textFieldHandle:(textFieldHandle)textFieldHandle
-          actionHandle:(actionHandle)actionHandle;
+      textFieldHandler:(textFieldHandler)textFieldHandler
+         actionHandler:(actionHandler)actionHandler;
 
 
 /**
@@ -45,9 +45,9 @@ typedef void(^textFieldHandle)(UITextField *textField, NSInteger index);
  */
 + (void)actionSheettWithTitle:(NSString *)title
                       message:(NSString *)message
-                 actionNumber:(NSInteger)actionNumber
+                 actionNumber:(NSUInteger)actionNumber
                  actionTitles:(NSArray *)actionTitle
-                 actionHandle:(actionHandle)actionHandle;
+                actionHandler:(actionHandle)actionHandler;
 
 
 
