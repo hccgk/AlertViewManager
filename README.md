@@ -1,2 +1,2 @@
-UIAlertController�ķ�װ��һ�д������
+UIAlertController的封装，一行代码调用
 
