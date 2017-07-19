@@ -46,7 +46,7 @@ typedef void(^textFieldHandler)(UITextField *textField, NSUInteger index);
                       message:(NSString *)message
                  actionNumber:(NSUInteger)actionNumber
                  actionTitles:(NSArray *)actionTitle
-                actionHandler:(actionHandle)actionHandler;
+                actionHandler:(actionHandler)actionHandler;
 
 
 
